@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bharucha & Co. — Decades of Legal Excellence</title>
+<meta name="description" content="Established in 1948, Bharucha & Co. is one of the oldest law firms in Pakistan — intellectual property, corporate, and civil law advisory from Karachi.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        navy: '#1a1f4d',
+        navydeep: '#11142f',
+        ivory: '#f6f3ec',
+        charcoal: '#2b2b2b',
+        gold: '#b89651'
+      },
+      fontFamily: {
+        serif: ['"Cormorant Garamond"', 'serif'],
+        sans: ['Inter', 'sans-serif']
+      }
+    }
+  }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; }
+  .font-serif { font-family: 'Cormorant Garamond', serif; }
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 1s ease, transform 1s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  .hero-glow {
+    position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(60% 50% at 70% 30%, rgba(120,130,220,0.22), transparent 70%),
+                radial-gradient(50% 45% at 20% 80%, rgba(184,150,81,0.14), transparent 70%);
+    animation: drift 16s ease-in-out infinite alternate;
+  }
+  @keyframes drift { from { transform: translate3d(-3%,-2%,0) scale(1); } to { transform: translate3d(3%,2%,0) scale(1.08); } }
+  .track { display:flex; width:max-content; animation: marquee 32s linear infinite; }
+  @keyframes marquee { from { transform: translateX(0);} to { transform: translateX(-50%);} }
+  .char { display:inline-block; opacity:0; transform: translateY(40px); animation: rise .9s forwards; }
+  @keyframes rise { to { opacity:1; transform:none; } }
+  @keyframes scrollcue { 0%{transform:translateY(-100%)} 100%{transform:translateY(400%)} }
+  @media (prefers-reduced-motion: reduce){ .hero-glow,.track,.char{animation:none!important} .char{opacity:1;transform:none} }
+</style>
+</head>
+<body class="bg-ivory text-charcoal antialiased">
+
+<!-- NAV -->
+<header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
+  <div class="mx-auto max-w-7xl px-6 lg:px-10 flex items-center justify-between h-20">
+    <a href="#top" class="flex items-center group">
+      <img id="logoWhite" src="logo-white.png" alt="Bharucha & Co." class="h-9 lg:h-10 w-auto">
+      <img id="logoNavy" src="logo-navy.png" alt="Bharucha & Co." class="h-9 lg:h-10 w-auto hidden">
+    </a>
+    <nav class="hidden lg:flex items-center gap-9 text-sm tracking-wide" id="navlinks">
+      <a href="#firm" class="text-ivory/80 hover:text-gold transition">The Firm</a>
+      <a href="#services" class="text-ivory/80 hover:text-gold transition">Services</a>
+      <a href="#people" class="text-ivory/80 hover:text-gold transition">Professionals</a>
+      <a href="#news" class="text-ivory/80 hover:text-gold transition">Insights</a>
+      <a href="#contact" id="navcta" class="bg-gold text-navydeep font-medium px-6 py-2 rounded-full hover:bg-ivory transition">Contact</a>
+    </nav>
+    <button id="burger" class="lg:hidden text-ivory text-3xl leading-none" aria-label="Open menu">&#8801;</button>
+  </div>
+  <div id="mobilemenu" class="hidden lg:hidden bg-navydeep/98 backdrop-blur px-6 py-6 space-y-4 text-ivory text-lg">
+    <a href="#firm" class="block">The Firm</a>
+    <a href="#services" class="block">Services</a>
+    <a href="#people" class="block">Professionals</a>
+    <a href="#news" class="block">Insights</a>
+    <a href="#contact" class="block text-gold">Contact</a>
+  </div>
+</header>
+
+<!-- HERO (scroll-driven, pinned stage) -->
+<section id="top" class="relative bg-navydeep text-ivory" style="height:320vh">
+  <div id="stage" class="sticky top-0 h-screen overflow-hidden flex items-center pt-24 pb-44 lg:pb-40">
+    <!-- photographic layer (parallax) with graceful fallback to navy -->
+    <div id="heroimg" class="absolute inset-0 will-change-transform">
+      <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=2400&auto=format&fit=crop" alt="" class="w-full h-[120%] object-cover opacity-40" onerror="this.style.display='none'">
+    </div>
+    <!-- navy gradients to darken photo & keep brand + readability -->
+    <div class="absolute inset-0" style="background:linear-gradient(90deg,#11142f 0%,rgba(17,20,47,0.78) 45%,rgba(17,20,47,0.45) 100%)"></div>
+    <div class="absolute inset-0" style="background:linear-gradient(0deg,#11142f 0%,rgba(17,20,47,0.15) 35%,transparent 60%)"></div>
+
+    <!-- architectural line motif (parallax) -->
+    <svg id="motif" class="absolute right-[-4%] bottom-0 h-[88%] w-auto text-ivory/[0.07] will-change-transform" viewBox="0 0 400 600" fill="none" stroke="currentColor" stroke-width="1.2" preserveAspectRatio="xMaxYMax meet" aria-hidden="true">
+      <path d="M40 600 V120 M110 600 V120 M180 600 V120 M250 600 V120 M320 600 V120"/>
+      <path d="M20 120 H340 M20 110 H340"/>
+      <path d="M30 90 Q180 20 330 90"/>
+      <circle cx="40" cy="120" r="6"/><circle cx="110" cy="120" r="6"/><circle cx="180" cy="120" r="6"/><circle cx="250" cy="120" r="6"/><circle cx="320" cy="120" r="6"/>
+    </svg>
+
+    <div id="glow" class="hero-glow"></div>
+    <div id="grid" class="absolute inset-0 opacity-[0.05] will-change-transform" style="background-image:radial-gradient(circle,#ffffff 1px,transparent 1px);background-size:46px 46px;"></div>
+    <div id="ghost" class="pointer-events-none absolute -right-10 top-1/2 -translate-y-1/2 font-serif text-[34vw] leading-none text-ivory/[0.03] select-none will-change-transform">1948</div>
+
+    <div class="relative mx-auto max-w-7xl px-6 lg:px-10 w-full">
+      <div id="eyebrow" class="flex items-center gap-3 mb-7 text-gold text-[11px] tracking-[0.4em] uppercase will-change-transform">
+        <span class="h-px w-12 bg-gold/70"></span> Established 1948 · Karachi, Pakistan
+      </div>
+      <h1 class="font-serif font-medium leading-[0.95] text-[clamp(2.5rem,6.2vw,5.75rem)]">
+        <span class="block overflow-hidden pb-1"><span id="line1" class="block will-change-transform"></span></span>
+        <span class="block overflow-hidden pb-1"><span id="line2" class="block will-change-transform text-gold italic"></span></span>
+      </h1>
+      <p id="herosub" class="mt-9 max-w-lg text-lg text-ivory/70 leading-relaxed will-change-transform">
+        One of Pakistan's oldest law firms — delivering thorough, considered counsel across intellectual property, corporate, and civil law since 1948.
+      </p>
+      <div id="herocta" class="mt-10 flex flex-wrap gap-4 will-change-transform">
+        <a href="#services" class="bg-gold text-navydeep px-8 py-3.5 rounded-full text-sm tracking-wide font-medium hover:bg-ivory transition">Explore our practice</a>
+        <a href="#contact" class="border border-ivory/40 text-ivory px-8 py-3.5 rounded-full text-sm tracking-wide hover:border-gold hover:text-gold transition">Speak with us</a>
+      </div>
+    </div>
+
+    <!-- stat strip (slides up near end) -->
+    <div id="stats" class="absolute bottom-0 inset-x-0 border-t border-ivory/10 bg-navydeep/40 backdrop-blur-sm will-change-transform">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10 grid grid-cols-2 md:grid-cols-4 divide-x divide-ivory/10">
+        <div class="py-6 pr-4 group"><div class="text-[10px] text-gold/60 tracking-widest mb-1">01</div><div class="font-serif text-3xl lg:text-4xl text-ivory">75<span class="text-gold">+</span></div><div class="text-xs tracking-wide text-ivory/55 mt-1">Years of practice</div></div>
+        <div class="py-6 px-4 group"><div class="text-[10px] text-gold/60 tracking-widest mb-1">02</div><div class="font-serif text-3xl lg:text-4xl text-ivory">7</div><div class="text-xs tracking-wide text-ivory/55 mt-1">Practice areas</div></div>
+        <div class="py-6 px-4 group"><div class="text-[10px] text-gold/60 tracking-widest mb-1">03</div><div class="font-serif text-3xl lg:text-4xl text-ivory">IAM<span class="text-gold">/</span>WTR</div><div class="text-xs tracking-wide text-ivory/55 mt-1">Globally ranked</div></div>
+        <div class="py-6 pl-4 group"><div class="text-[10px] text-gold/60 tracking-widest mb-1">04</div><div class="font-serif text-3xl lg:text-4xl text-ivory">1948</div><div class="text-xs tracking-wide text-ivory/55 mt-1">Founded in Karachi</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE ARE -->
+<section id="firm" class="py-28 lg:py-36 bg-ivory">
+  <div class="mx-auto max-w-7xl px-6 lg:px-10 grid lg:grid-cols-12 gap-14 items-center">
+    <div class="lg:col-span-6 reveal">
+      <div class="text-xs tracking-[0.3em] uppercase text-gold mb-4">Who we are</div>
+      <h2 class="font-serif text-5xl lg:text-6xl leading-tight text-navy mb-8">A legacy of trust since 1948</h2>
+      <div class="space-y-6 text-lg leading-relaxed text-charcoal/80">
+        <p>Established in 1948, <span class="text-navy font-medium">Bharucha &amp; Co.</span> stands as one of the oldest law firms in Pakistan. Across more than seven decades, the firm has built an enduring reputation for diligence, discretion, and depth of counsel.</p>
+        <p>We offer a comprehensive range of intellectual property services — including patents, trademarks, designs, and copyright — alongside extensive, well-rounded advisory services spanning the many facets of civil and corporate law.</p>
+        <a href="#services" class="inline-flex items-center gap-2 text-navy font-medium border-b border-gold pb-1 hover:text-gold transition">Our areas of practice &rarr;</a>
+      </div>
+    </div>
+    <div class="lg:col-span-6 reveal">
+      <div class="relative">
+        <div class="aspect-[4/5] bg-navy overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1400&auto=format&fit=crop" alt="Law library" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=1400&auto=format&fit=crop'">
+        </div>
+        <div class="absolute -bottom-6 -left-6 bg-gold text-navydeep px-8 py-6 hidden sm:block">
+          <div class="font-serif text-4xl leading-none">1948</div>
+          <div class="text-xs tracking-widest uppercase mt-1">Est. in Karachi</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="py-24 lg:py-32 bg-navy text-ivory">
+  <div class="mx-auto max-w-7xl px-6 lg:px-10">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 reveal">
+      <div>
+        <div class="text-xs tracking-[0.3em] uppercase text-gold mb-4">Services</div>
+        <h2 class="font-serif text-5xl lg:text-6xl">Areas of practice</h2>
+      </div>
+      <p class="max-w-md text-ivory/60">Counsel across the disciplines that matter most to enterprises, families, and institutions in Pakistan and beyond.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-ivory/10 border border-ivory/10" id="servicegrid"></div>
+  </div>
+</section>
+
+<!-- PROFESSIONALS -->
+<section id="people" class="py-28 lg:py-36 bg-ivory">
+  <div class="mx-auto max-w-7xl px-6 lg:px-10">
+    <div class="text-xs tracking-[0.3em] uppercase text-gold mb-4 reveal">Professionals</div>
+    <h2 class="font-serif text-5xl lg:text-6xl text-navy mb-14 reveal">The people behind the practice</h2>
+    <div class="grid md:grid-cols-3 gap-8" id="peoplegrid"></div>
+    <div class="mt-12 reveal">
+      <a href="#" class="inline-flex items-center gap-2 text-navy font-medium border-b border-gold pb-1 hover:text-gold transition">View all professionals &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS -->
+<section id="news" class="py-24 lg:py-32 bg-charcoal text-ivory">
+  <div class="mx-auto max-w-7xl px-6 lg:px-10">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14 reveal">
+      <div>
+        <div class="text-xs tracking-[0.3em] uppercase text-gold mb-4">Insights</div>
+        <h2 class="font-serif text-5xl lg:text-6xl">Legal news &amp; updates</h2>
+      </div>
+      <a href="#" class="text-ivory/70 hover:text-gold transition border-b border-gold/50 pb-1">Explore all &rarr;</a>
+    </div>
+    <div class="grid md:grid-cols-3 gap-px bg-ivory/10 border border-ivory/10" id="newsgrid"></div>
+  </div>
+</section>
+
+<!-- RECOGNITIONS -->
+<section class="py-20 bg-ivory border-y border-charcoal/10 overflow-hidden">
+  <div class="mx-auto max-w-7xl px-6 lg:px-10 mb-10 text-center reveal">
+    <div class="text-xs tracking-[0.3em] uppercase text-gold mb-3">Recognitions</div>
+    <h2 class="font-serif text-4xl text-navy">Ranked among the world's leading firms</h2>
+  </div>
+  <div class="relative">
+    <div class="track gap-12 px-6" id="awards"></div>
+  </div>
+</section>
+
+<!-- MEMBERSHIPS (slider) -->
+<section id="memberships" class="py-24 lg:py-32 bg-navy text-ivory overflow-hidden">
+  <div class="mx-auto max-w-7xl px-6 lg:px-10">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 reveal">
+      <div>
+        <div class="text-xs tracking-[0.3em] uppercase text-gold mb-4">Memberships</div>
+        <h2 class="font-serif text-5xl lg:text-6xl">Affiliations &amp; associations</h2>
+      </div>
+      <div class="flex items-center gap-3">
+        <button id="memPrev" aria-label="Previous" class="h-12 w-12 rounded-full border border-ivory/30 flex items-center justify-center text-xl hover:border-gold hover:text-gold transition">&larr;</button>
+        <button id="memNext" aria-label="Next" class="h-12 w-12 rounded-full border border-ivory/30 flex items-center justify-center text-xl hover:border-gold hover:text-gold transition">&rarr;</button>
+      </div>
+    </div>
+    <p class="max-w-2xl text-ivory/60 mb-12 reveal">A member of the world's foremost intellectual-property and legal bodies — keeping the firm connected to global standards and practice.</p>
+    <div id="memViewport" class="overflow-hidden">
+      <div id="memTrack" class="flex gap-5 transition-transform duration-500 ease-out"></div>
+    </div>
+    <div id="memDots" class="flex gap-2 mt-10 justify-center"></div>
+  </div>
+</section>
+
+<!-- STATEMENT BAND (parallax image) -->
+<section class="relative overflow-hidden bg-navydeep">
+  <div id="bandimg" class="absolute inset-0 will-change-transform">
+    <img src="https://images.unsplash.com/photo-1453945619913-79ec89a82c51?q=80&w=2400&auto=format&fit=crop" alt="" class="w-full h-[130%] object-cover opacity-30" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=2400&auto=format&fit=crop'">
+  </div>
+  <div class="absolute inset-0 bg-navydeep/70"></div>
+  <div class="relative mx-auto max-w-5xl px-6 lg:px-10 py-28 lg:py-40 text-center">
+    <div class="text-xs tracking-[0.3em] uppercase text-gold mb-6 reveal">Our commitment</div>
+    <p class="font-serif text-3xl md:text-4xl lg:text-5xl leading-snug text-ivory reveal">
+      &ldquo;For over seven decades, we have met every matter with the same conviction — <span class="text-gold italic">thorough counsel, delivered with integrity.</span>&rdquo;
+    </p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-28 lg:py-36 bg-navydeep text-ivory">
+  <div class="mx-auto max-w-7xl px-6 lg:px-10 grid lg:grid-cols-2 gap-16">
+    <div class="reveal">
+      <div class="text-xs tracking-[0.3em] uppercase text-gold mb-4">Contact us</div>
+      <h2 class="font-serif text-5xl lg:text-6xl leading-tight mb-10">Let's discuss your matter</h2>
+      <dl class="space-y-7 text-ivory/80">
+        <div><dt class="text-xs uppercase tracking-widest text-gold mb-1">Address</dt><dd class="text-lg">F-7/1, Block 8, Kehkashan Clifton,<br>Karachi 75600, Pakistan</dd></div>
+        <div><dt class="text-xs uppercase tracking-widest text-gold mb-1">Email</dt><dd class="text-lg"><a href="mailto:email@bharuchaco.com" class="hover:text-gold transition">email@bharuchaco.com</a></dd></div>
+        <div><dt class="text-xs uppercase tracking-widest text-gold mb-1">Phone</dt><dd class="text-lg">+92 213 537 9544</dd></div>
+      </dl>
+    </div>
+    <form class="space-y-5 reveal" onsubmit="event.preventDefault();this.querySelector('button').textContent='Thank you — we\'ll be in touch';">
+      <div class="grid sm:grid-cols-2 gap-5">
+        <input required placeholder="Name" class="w-full bg-transparent border border-ivory/20 rounded-lg px-4 py-3.5 placeholder-ivory/40 focus:border-gold outline-none transition">
+        <input placeholder="Phone" class="w-full bg-transparent border border-ivory/20 rounded-lg px-4 py-3.5 placeholder-ivory/40 focus:border-gold outline-none transition">
+      </div>
+      <input required type="email" placeholder="Email" class="w-full bg-transparent border border-ivory/20 rounded-lg px-4 py-3.5 placeholder-ivory/40 focus:border-gold outline-none transition">
+      <input placeholder="Subject" class="w-full bg-transparent border border-ivory/20 rounded-lg px-4 py-3.5 placeholder-ivory/40 focus:border-gold outline-none transition">
+      <textarea rows="4" placeholder="Message" class="w-full bg-transparent border border-ivory/20 rounded-lg px-4 py-3.5 placeholder-ivory/40 focus:border-gold outline-none transition"></textarea>
+      <button class="bg-gold text-navydeep px-8 py-3.5 rounded-full text-sm tracking-wide font-medium hover:bg-ivory transition">Send message</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-navydeep text-ivory/60 border-t border-ivory/10">
+  <div class="mx-auto max-w-7xl px-6 lg:px-10 py-10 flex flex-col md:flex-row items-center justify-between gap-6 text-sm">
+    <img src="logo-white.png" alt="Bharucha & Co." class="h-9 w-auto">
+    <p>© 2026 Bharucha &amp; Co. All Rights Reserved. · <a href="#" class="hover:text-gold">Privacy Notice</a> · <a href="#" class="hover:text-gold">Retention Policy</a></p>
+    <div class="flex gap-5">
+      <a href="https://www.facebook.com/BharuchaCo" class="hover:text-gold transition">Facebook</a>
+      <a href="https://x.com/BharuchaCo" class="hover:text-gold transition">X</a>
+      <a href="https://www.linkedin.com/company/bharuchaco" class="hover:text-gold transition">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Headline fill (two lines)
+(function(){
+  var el = document.getElementById('line1');
+  "Decades of".split('').forEach(function(c,i){
+    var s=document.createElement('span'); s.className='char'; s.textContent=c===' '?' ':c; s.style.animationDelay=(0.3+i*0.035)+'s'; el.appendChild(s);
+  });
+  var el2 = document.getElementById('line2');
+  "Legal Excellence".split('').forEach(function(c,i){
+    var s = document.createElement('span');
+    s.className='char'; s.textContent = c===' '?' ':c;
+    s.style.animationDelay = (0.65 + i*0.035)+'s';
+    el2.appendChild(s);
+  });
+})();
+
+// Scroll-driven hero (eased scrub — layers move WITH scroll position)
+(function(){
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var wrap=document.getElementById('top');
+  var line1=document.getElementById('line1'),line2=document.getElementById('line2'),
+      sub=document.getElementById('herosub'),cta=document.getElementById('herocta'),
+      eyebrow=document.getElementById('eyebrow'),glow=document.getElementById('glow'),
+      grid=document.getElementById('grid'),ghost=document.getElementById('ghost'),
+      stats=document.getElementById('stats'),heroimg=document.getElementById('heroimg'),
+      motif=document.getElementById('motif');
+  function clamp(v,a,b){return Math.max(a,Math.min(b,v));}
+  function range(x,a,b){return clamp((x-a)/(b-a),0,1);}
+  var cur=0, target=0;         // eased scroll progress
+  var mx=0, my=0, cmx=0, cmy=0; // cursor (target / current)
+  function readScroll(){
+    var rect=wrap.getBoundingClientRect();
+    var total=wrap.offsetHeight-window.innerHeight;
+    target=clamp(-rect.top/total,0,1);
+  }
+  function apply(p){
+    var lift=p*150;
+    line1.style.transform='translate3d('+(-p*110)+'px,'+(-lift)+'px,0) scale('+(1-p*0.05)+')';
+    line2.style.transform='translate3d('+(p*110)+'px,'+(-lift)+'px,0) scale('+(1-p*0.05)+')';
+    var ep=range(p,0,0.22); eyebrow.style.opacity=1-ep; eyebrow.style.transform='translateY('+(-ep*40)+'px)';
+    var sp=range(p,0.1,0.4); sub.style.opacity=sp; sub.style.transform='translateY('+((1-sp)*45)+'px)';
+    var cp=range(p,0.2,0.5); cta.style.opacity=cp; cta.style.transform='translateY('+((1-cp)*45)+'px)';
+    grid.style.transform='translate3d(0,'+(p*150)+'px,0)';
+    if(heroimg) heroimg.style.transform='translate3d(0,'+(p*-70)+'px,0) scale('+(1+p*0.06)+')';
+    if(motif) motif.style.transform='translate3d('+(p*120)+'px,'+(p*40)+'px,0)';
+    ghost.style.transform='translate(0,-50%) translate3d('+(p*-180)+'px,0,0)';
+    // glow follows scroll AND cursor
+    glow.style.transform='translate3d('+(p*-80 + cmx*40)+'px,'+(p*60 + cmy*40)+'px,0) scale('+(1+p*0.2)+')';
+    var stp=range(p,0.55,0.92); stats.style.transform='translateY('+((1-stp)*100)+'%)'; stats.style.opacity=stp;
+  }
+  function loop(){
+    cur += (target-cur)*0.09;
+    cmx += (mx-cmx)*0.06; cmy += (my-cmy)*0.06;
+    apply(cur);
+    requestAnimationFrame(loop);
+  }
+  sub.style.opacity=0; cta.style.opacity=0; stats.style.opacity=0;
+  window.addEventListener('scroll', readScroll, {passive:true});
+  window.addEventListener('resize', readScroll);
+  window.addEventListener('mousemove', function(e){
+    mx=(e.clientX/window.innerWidth-0.5)*2; my=(e.clientY/window.innerHeight-0.5)*2;
+  }, {passive:true});
+  readScroll(); loop();
+})();
+
+// Services
+var services = [
+  ['Intellectual Property','Patents, trademarks, designs, copyright & domain names.'],
+  ['Company Law','Corporate structuring, compliance & commercial advisory.'],
+  ['Inheritance & Succession','Estate planning, succession & wealth continuity.'],
+  ['Employment Law','Workforce, contracts & employer–employee disputes.'],
+  ['Nonprofit Organization','Formation, governance & regulatory guidance.'],
+  ['Franchising & Litigation','Franchise structuring and dispute resolution.'],
+  ['Real Estate & Property','Transactions, title & property advisory.']
+];
+document.getElementById('servicegrid').innerHTML = services.map(function(s,i){
+  return '<a href="#contact" class="group bg-navy p-8 lg:p-10 hover:bg-navydeep transition reveal block">'
+    +'<div class="font-serif text-gold/70 text-sm mb-6">0'+(i+1)+'</div>'
+    +'<h3 class="font-serif text-2xl lg:text-3xl mb-3 group-hover:text-gold transition">'+s[0]+'</h3>'
+    +'<p class="text-ivory/55 text-sm leading-relaxed">'+s[1]+'</p></a>';
+}).join('');
+
+// People
+var people = [
+  ['Mohammad Fazil Bharucha','Partner','Mohammad Fazil Bharucha.png'],
+  ['Abdul Aziz','Partner','Abdul Aziz.png'],
+  ['Tayseer Fazil Bharucha','Partner','Tayseer Fazil Bharucha.jpg']
+];
+document.getElementById('peoplegrid').innerHTML = people.map(function(p){
+  return '<div class="group reveal">'
+    +'<div class="aspect-[4/5] bg-navy/5 border border-navy/10 overflow-hidden">'
+    +'<img src="'+encodeURI(p[2])+'" alt="'+p[0]+'" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500 scale-100 group-hover:scale-105"></div>'
+    +'<h3 class="font-serif text-2xl text-navy mt-5">'+p[0]+'</h3>'
+    +'<p class="text-gold text-sm tracking-wide uppercase mt-1">'+p[1]+'</p></div>';
+}).join('');
+
+// News
+var FALLBACK='https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=1200&auto=format&fit=crop';
+var news = [
+  ['World IP Day','From Sialkot to the World','https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop'],
+  ['Banking','State Bank of Pakistan reopens doors to crypto banking after eight-year ban','https://images.unsplash.com/photo-1621761191319-c6fb62004040?q=80&w=1200&auto=format&fit=crop'],
+  ['Legislation','Pakistan Citizenship Amendment Act 2026','https://images.unsplash.com/photo-1589391886645-d51941baf7fb?q=80&w=1200&auto=format&fit=crop']
+];
+document.getElementById('newsgrid').innerHTML = news.map(function(n){
+  return '<a href="#" class="block bg-charcoal hover:bg-navydeep transition group reveal">'
+    +'<div class="aspect-[16/10] overflow-hidden bg-navy"><img src="'+n[2]+'" alt="" class="w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition duration-500" onerror="this.onerror=null;this.src=\''+FALLBACK+'\'"></div>'
+    +'<div class="p-8 lg:p-9">'
+    +'<div class="text-xs tracking-widest uppercase text-gold mb-4">'+n[0]+'</div>'
+    +'<h3 class="font-serif text-2xl leading-snug mb-6 group-hover:text-gold transition">'+n[1]+'</h3>'
+    +'<span class="text-ivory/50 text-sm">Read more &rarr;</span></div></a>';
+}).join('');
+
+// Awards marquee (duplicated for seamless loop)
+var awards = ['recognitions/IAM-PATENT-1000-Recommended-Firm-2026.png','recognitions/WTR-1000-Recommended-Firm-2026.png','recognitions/x1.png','recognitions/x2.png','recognitions/x3.png','recognitions/x5.png','recognitions/x18.png','recognitions/x19.png','recognitions/x20.png','recognitions/x21.png','recognitions/x22.png'];
+var dup = awards.concat(awards);
+document.getElementById('awards').innerHTML = dup.map(function(a){
+  return '<div class="shrink-0 flex items-center justify-center h-24 px-4"><img src="'+encodeURI(a)+'" alt="Recognition" class="max-h-full w-auto object-contain opacity-70 hover:opacity-100 transition"></div>';
+}).join('');
+
+// Memberships slider
+(function(){
+  var members = [
+    ['INTA','International Trademark Association'],
+    ['CITMA','The Chartered Institute of Trade Mark Attorneys'],
+    ['AIPPI','International Association for the Protection of Intellectual Property'],
+    ['APAA','Asian Patent Attorneys Association'],
+    ['CIPA','The Chartered Institute of Patent Agents'],
+    ['AIPLA','American Intellectual Property Law Association'],
+    ['IBA','International Bar Association'],
+    ['IPBA','Inter-Pacific Bar Association'],
+    ['PTMG','The Pharmaceutical Trade Marks Group'],
+    ['MARQUES','The Association of European Trade Mark Owners'],
+    ['ECTA','European Communities Trade Mark Association'],
+    ['LES','Licensing Executives Society'],
+    ['FICPI','The International Federation of Intellectual Property Attorneys'],
+    ['GLIPA','Global Intellectual Property Alliance'],
+    ['AEA','Association of European Attorneys']
+  ];
+  var track=document.getElementById('memTrack'), vp=document.getElementById('memViewport'),
+      prev=document.getElementById('memPrev'), next=document.getElementById('memNext'),
+      dotsWrap=document.getElementById('memDots');
+  if(!track) return;
+  track.innerHTML = members.map(function(m){
+    return '<div class="mem-card shrink-0 bg-navydeep/60 border border-ivory/10 p-8 flex flex-col justify-between hover:border-gold/50 transition group" style="min-height:230px">'
+      +'<div class="font-serif text-4xl lg:text-5xl text-gold group-hover:text-ivory transition">'+m[0]+'</div>'
+      +'<div class="text-sm text-ivory/65 leading-relaxed mt-6">'+m[1]+'</div></div>';
+  }).join('');
+  var cards=track.children, index=0, gap=20;
+  function perView(){ var w=window.innerWidth; return w>=1024?4:(w>=768?3:(w>=560?2:1)); }
+  function sizeCards(){
+    var pv=perView();
+    var cw=(vp.clientWidth-gap*(pv-1))/pv;
+    for(var i=0;i<cards.length;i++){ cards[i].style.width=cw+'px'; }
+    return cw;
+  }
+  function maxIndex(){ return Math.max(0, cards.length-perView()); }
+  function go(i){
+    index=Math.max(0,Math.min(i,maxIndex()));
+    var cw=cards[0].offsetWidth;
+    track.style.transform='translateX('+(-(cw+gap)*index)+'px)';
+    renderDots();
+  }
+  function renderDots(){
+    var n=maxIndex()+1, html='';
+    for(var i=0;i<n;i++){ html+='<button data-i="'+i+'" class="h-2 rounded-full transition-all '+(i===index?'w-6 bg-gold':'w-2 bg-ivory/30')+'"></button>'; }
+    dotsWrap.innerHTML=html;
+    Array.prototype.forEach.call(dotsWrap.children,function(b){ b.addEventListener('click',function(){ go(+b.dataset.i); restart(); }); });
+  }
+  prev.addEventListener('click',function(){ go(index<=0?maxIndex():index-1); restart(); });
+  next.addEventListener('click',function(){ go(index>=maxIndex()?0:index+1); restart(); });
+  // drag / swipe
+  var down=false, startX=0, startIdx=0;
+  vp.addEventListener('pointerdown',function(e){ down=true; startX=e.clientX; startIdx=index; vp.setPointerCapture(e.pointerId); });
+  vp.addEventListener('pointerup',function(e){ if(!down)return; down=false; var dx=e.clientX-startX; var cw=cards[0].offsetWidth+gap; var moved=Math.round(-dx/cw); go(startIdx+moved); restart(); });
+  // autoplay
+  var timer=null;
+  function play(){ timer=setInterval(function(){ go(index>=maxIndex()?0:index+1); },4000); }
+  function stop(){ if(timer){clearInterval(timer); timer=null;} }
+  function restart(){ stop(); play(); }
+  vp.addEventListener('mouseenter',stop); vp.addEventListener('mouseleave',play);
+  window.addEventListener('resize',function(){ sizeCards(); go(Math.min(index,maxIndex())); });
+  sizeCards(); go(0); play();
+})();
+
+// Nav scroll state
+var nav = document.getElementById('nav'), logoWhite=document.getElementById('logoWhite'), logoNavy=document.getElementById('logoNavy'), links=document.getElementById('navlinks');
+window.addEventListener('scroll', function(){
+  if(window.scrollY > 60){
+    nav.classList.add('bg-ivory/95','backdrop-blur','shadow-sm');
+    logoWhite.classList.add('hidden'); logoNavy.classList.remove('hidden');
+    links.querySelectorAll('a').forEach(function(a){ if(a.id==='navcta')return; a.classList.remove('text-ivory/80','text-ivory');a.classList.add('text-navy/70'); });
+  } else {
+    nav.classList.remove('bg-ivory/95','backdrop-blur','shadow-sm');
+    logoNavy.classList.add('hidden'); logoWhite.classList.remove('hidden');
+    links.querySelectorAll('a').forEach(function(a){ if(a.id==='navcta')return; a.classList.add('text-ivory/80');a.classList.remove('text-navy/70'); });
+  }
+});
+
+// Mobile menu
+document.getElementById('burger').addEventListener('click',function(){
+  document.getElementById('mobilemenu').classList.toggle('hidden');
+});
+
+// Reveal on scroll
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+// Parallax for statement band image
+(function(){
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var band=document.getElementById('bandimg'); if(!band) return;
+  var section=band.parentElement, t=false;
+  function upd(){ t=false;
+    var r=section.getBoundingClientRect(), vh=window.innerHeight;
+    if(r.bottom<0||r.top>vh) return;
+    var prog=(vh-r.top)/(vh+r.height); // 0..1 as it passes
+    band.style.transform='translate3d(0,'+((prog-0.5)*-80)+'px,0)';
+  }
+  window.addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(upd);}},{passive:true});
+  upd();
+})();
+</script>
+<script>
+// Rebuild headline cleanly so spaces between words render correctly
+(function(){
+  function fill(el, text, base){
+    el.innerHTML='';
+    text.split('').forEach(function(c,i){
+      var s=document.createElement('span'); s.className='char';
+      if(c===' '){ s.style.display='inline-block'; s.style.width='0.28em'; s.innerHTML='&nbsp;'; }
+      else { s.textContent=c; }
+      s.style.animationDelay=(base+i*0.035)+'s'; el.appendChild(s);
+    });
+  }
+  var l1=document.getElementById('line1'), l2=document.getElementById('line2');
+  if(l1&&l2){ fill(l1,'Decades of',0.3); fill(l2,'Legal Excellence',0.65); }
+})();
+</script>
+</body>
+</html>
