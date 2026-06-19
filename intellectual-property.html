@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intellectual Property — Bharucha & Co.</title>
+<meta name="description" content="Intellectual property services at Bharucha & Co. — trade marks, patents, industrial designs, copyright and domain names in Pakistan since 1948.">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/theme.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="inner" class="bg-ivory text-charcoal antialiased">
+
+<!-- NAV (injected by components.js) -->
+<header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-500"></header>
+
+<!-- HERO -->
+<section class="relative bg-navydeep text-ivory overflow-hidden">
+  <div class="hero-glow"></div>
+  <div class="absolute inset-0 opacity-[0.05]" style="background-image:radial-gradient(circle,#ffffff 1px,transparent 1px);background-size:46px 46px;"></div>
+  <div class="absolute inset-0">
+    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2200&auto=format&fit=crop" alt="" class="w-full h-full object-cover opacity-20" onerror="this.style.display='none'">
+  </div>
+  <div class="absolute inset-0" style="background:linear-gradient(90deg,#11142f 0%,rgba(17,20,47,0.7) 70%,rgba(17,20,47,0.4) 100%)"></div>
+  <div class="relative mx-auto max-w-7xl px-6 lg:px-10 pt-36 lg:pt-44 pb-20 lg:pb-28">
+    <div class="flex items-center gap-2 text-xs tracking-[0.25em] uppercase text-ivory/50 mb-8 reveal">
+      <a href="index.html" class="hover:text-gold transition">Home</a><span>/</span>
+      <a href="index.html#services" class="hover:text-gold transition">Services</a><span>/</span>
+      <span class="text-gold">Intellectual Property</span>
+    </div>
+    <div class="flex items-center gap-3 mb-6 text-gold text-[11px] tracking-[0.4em] uppercase reveal">
+      <span class="h-px w-12 bg-gold/70"></span> Practice area
+    </div>
+    <h1 class="font-serif font-medium leading-[0.95] text-[clamp(2.75rem,7vw,6rem)] max-w-4xl reveal">Intellectual <span class="italic text-gold">Property</span></h1>
+    <p class="mt-8 max-w-2xl text-lg text-ivory/70 leading-relaxed reveal">A comprehensive range of intellectual property services — protecting trade marks, patents, designs, copyright and domain names under the laws of Pakistan, with decades of specialist experience.</p>
+  </div>
+</section>
+
+<!-- STICKY SUB-NAV -->
+<div id="subnav" class="sticky top-20 z-40 bg-navy/95 backdrop-blur border-y border-ivory/10">
+  <div class="mx-auto max-w-7xl px-6 lg:px-10">
+    <nav class="flex gap-7 overflow-x-auto whitespace-nowrap text-sm py-4 text-ivory/70" id="iptabs">
+      <a href="#trademarks" class="ip-tab inline-flex flex-col transition hover:text-gold">Trade Marks<span class="h-px w-0 bg-gold transition-all duration-300 mt-1"></span></a>
+      <a href="#patents" class="ip-tab inline-flex flex-col transition hover:text-gold">Patents<span class="h-px w-0 bg-gold transition-all duration-300 mt-1"></span></a>
+      <a href="#designs" class="ip-tab inline-flex flex-col transition hover:text-gold">Industrial Designs<span class="h-px w-0 bg-gold transition-all duration-300 mt-1"></span></a>
+      <a href="#copyright" class="ip-tab inline-flex flex-col transition hover:text-gold">Copyright<span class="h-px w-0 bg-gold transition-all duration-300 mt-1"></span></a>
+      <a href="#domain" class="ip-tab inline-flex flex-col transition hover:text-gold">Domain Names<span class="h-px w-0 bg-gold transition-all duration-300 mt-1"></span></a>
+    </nav>
+  </div>
+</div>
+
+<main id="ipSections"></main>
+
+<!-- CTA -->
+<section class="bg-navydeep text-ivory">
+  <div class="mx-auto max-w-5xl px-6 lg:px-10 py-24 lg:py-28 text-center">
+    <div class="text-xs tracking-[0.3em] uppercase text-gold mb-5 reveal">Protect what you've built</div>
+    <h2 class="font-serif text-4xl lg:text-5xl leading-tight mb-8 reveal">Speak with our intellectual property team</h2>
+    <a href="index.html#contact" class="inline-block bg-gold text-navydeep px-9 py-4 rounded-full text-sm tracking-wide font-medium hover:bg-ivory transition reveal">Get in touch &rarr;</a>
+  </div>
+</section>
+
+<!-- FOOTER (injected by components.js) -->
+<footer id="site-footer"></footer>
+
+<script src="assets/components.js"></script>
+<script src="assets/site.js"></script>
+<script>
+var areas = [
+  {
+    id:'trademarks', num:'01', title:'Trade Marks',
+    lead:'A trade mark is a word, phrase, symbol, and/or design that identifies and distinguishes the source of the goods of one party from those of others. A service mark identifies and distinguishes the source of a service rather than goods.',
+    laws:['Trade Marks Ordinance 2001','Trade Marks Rules 2004'],
+    procedure:[
+      'On filing, the application is examined by the Registrar of Trade Marks — usually within 12 months — after which objections may be raised. The applicant must respond within 2 months of notice.',
+      'Once satisfied with the reply, the Registrar may approve the mark for advertisement; if not, the applicant is called for a hearing where further amendments may be required.',
+      'Cleared of objections, the mark proceeds to advertisement in the Trade Marks Journal, inviting any third-party opposition.',
+      'In the absence of opposition, the mark is registered.'
+    ],
+    requirements:[
+      'Full name, nationality, trading style (if any) and full business address of the applicant.',
+      'List of goods or services for which registration is sought — separate applications for different classes.',
+      'Transliteration and translation of any non-English words appearing in the mark.',
+      'For a device/label mark, 15 prints of the mark.',
+      'First date of use of the mark in Pakistan, if used.',
+      'Power of Attorney signed by an authorised signatory at two places before a Notary Public.',
+      'For priority claims, a convention application may be filed within six months; priority documents within three months of filing in Pakistan.'
+    ],
+    services:['Trade Mark Searches','Application Filings','Legal Actions','Hearings','Oppositions','Acceptance & Registration','Renewals','Post Registration','Appeal in Superior Courts','Trade Mark Journal Watch Services']
+  },
+  {
+    id:'patents', num:'02', title:'Patents',
+    lead:'A patent grants exclusive rights to make, use and sell an invention for a limited period of 20 years. Patents are granted for new, non-obvious products or processes with industrial application. Patentability in Pakistan requires novelty, an inventive step and industrial applicability.',
+    laws:['Patents Ordinance 2000','Patents Rules 2003'],
+    types:[
+      ['Ordinary Application','Created once all criteria are met; the official date is the date of filing at the Patent Office.'],
+      ['Patent of Addition','Covers improvements or modifications to an invention already applied for or granted.'],
+      ['Convention Application','A priority application dated as of the corresponding first application made in a WTO member country.']
+    ],
+    procedure:[
+      'Receive request to file the patent.',
+      'Complete formalities with the client and the Patent Office.',
+      'Examination at the Patent Office (no fixed time).',
+      'Acceptance by the Controller of Patents.',
+      'Publication in the IP Journal and/or website.',
+      'Sealing in the absence of opposition.',
+      'Renewals.'
+    ],
+    requirements:[
+      'Full name, nationality and complete business address of the applicant(s).',
+      'Two copies of specification and claims in English (International A-4 size).',
+      'Two copies of drawings, if any (A-4 size).',
+      'Application form signed by the applicant(s), with inventor endorsement before two witnesses where the inventor is not the applicant — or an assignment document.',
+      'Power of Authority signed by the applicant(s) and notarised.',
+      'For priority applications, a certified copy of the basic specification within three months; priority claimable within 12 months of the first foreign application, with verified English translation where applicable.'
+    ],
+    services:['Patent Searches','Application Filing','Legal Actions','Hearings','Acceptance & Sealing','Filing Oppositions','Annuities','Post-Grant Matters','Appeal in Superior Courts','Patent Validity Check']
+  },
+  {
+    id:'designs', num:'03', title:'Industrial Designs',
+    lead:'An industrial design is the ornamental or aesthetic aspect of an article. It may consist of three-dimensional features, such as the shape or surface of an article, or two-dimensional features, such as patterns, lines or colour.',
+    laws:['Registered Designs Ordinance, 2000','Registered Designs Rules, 2023'],
+    procedure:[
+      'Filing of the design application at the IP Office.',
+      'Examination of the application.',
+      'Registration once the Registrar is satisfied all terms are met.',
+      'Issuance of a Registration Certificate, valid for 10 years.'
+    ],
+    requirements:[
+      'Full name, nationality and complete business address of the applicant.',
+      'Representations of the design (line drawings / photographs).',
+      'Power of Authority duly signed by an authorised signatory before a Notary Public.',
+      'For priority applications, certified priority documents at filing or within three months (with late fee); priority claimable within six months of the first foreign application, with verified English translation where applicable.'
+    ],
+    services:['Design Searches','Filing New Applications','Design Registrations','Legal Actions','Annuities']
+  },
+  {
+    id:'copyright', num:'04', title:'Copyright',
+    lead:'Copyright is a legal instrument that gives the creator of a work of art, literature, or a work conveying information or ideas, the right to control how the work is used — advancing the progress of knowledge by giving authors an economic incentive to create.',
+    laws:['Copyright Ordinance 1962','Copyright Rules 1967'],
+    procedure:[
+      'Filing the copyright application.',
+      'Publication in a leading newspaper within one month of filing.',
+      'Scrutiny or opposition, if any, regarding the application.',
+      'Where opposed, the application status changes to "pending".',
+      'Registration in the absence of opposition.'
+    ],
+    requirements:[
+      'Full name, nationality and full business address of the applicant.',
+      'Power of Attorney.',
+      'Name, business and residential address of the author of the work.',
+      'The year of creation of the work.',
+      'The year from which the work was published or used, in Pakistan and worldwide.',
+      'Affidavit from the author where the applicant is not the author and the work has been assigned.',
+      'For a logo or artwork, four sets on card showing author name and address, applicant name and year of creation.'
+    ],
+    services:['New Filings','Official Actions','Acceptance & Registration']
+  },
+  {
+    id:'domain', num:'05', title:'Domain Names',
+    lead:'A domain name is a user-friendly substitute for an internet address. The provisions of the Trade Marks Ordinance 2001 apply to domain names, subject to the provisions of the Third Schedule. A domain name used as a source identifier may be registered as a trade mark for the relevant goods or services.',
+    laws:['Trade Marks Ordinance 2001 — Third Schedule'],
+    procedure:[
+      'Acceptance, opposition and registration follow the same provisions that apply to trade marks under the Ordinance.',
+      'Registration is for a period of five years from the date of registration.',
+      'Renewable for further like terms, so long as the domain name remains in actual use on the internet.'
+    ],
+    requirements:[
+      'Evidence that the applicant offers goods or services via the internet using the domain name, in the form of a specimen showing use as a source identifier.',
+      'Mere directional use (like a telephone number or business address) does not count as use as a source identifier.',
+      'A domain name may be registered where it serves to distinguish the geographical origin of goods or services.',
+      'A domain name will not be registered if the public is liable to be misled as to its character or significance; the Registrar may require an indication that it is a domain name.'
+    ],
+    services:['Domain Name Registration','Source-Identifier Assessment','Acceptance & Opposition','Renewals']
+  }
+];
+
+function esc(s){ return s; }
+var html = areas.map(function(a, idx){
+  var dark = idx % 2 === 1;
+  var t = dark
+    ? { sec:'bg-navy text-ivory', lead:'text-ivory/70', title:'text-ivory', num:'text-ivory/10', sub:'text-gold', card:'bg-navydeep/50 border-ivory/10', cardText:'text-ivory/75', law:'border-ivory/20 text-ivory', chip:'bg-navydeep/60 text-ivory/90 border-ivory/15', line:'border-ivory/10', stepBorder:'border-ivory/15' }
+    : { sec:'bg-ivory text-charcoal', lead:'text-charcoal/80', title:'text-navy', num:'text-navy/10', sub:'text-gold', card:'bg-white border-navy/10', cardText:'text-charcoal/75', law:'border-navy/20 text-navy', chip:'bg-navy/5 text-navy border-navy/10', line:'border-navy/10', stepBorder:'border-navy/15' };
+
+  var laws = a.laws.map(function(l){ return '<div class="px-5 py-3 border '+t.law+' rounded-full text-sm">'+l+'</div>'; }).join('');
+
+  var types = a.types ? (
+    '<div class="mt-12"><h3 class="font-serif text-2xl '+t.title+' mb-6">Types of patent application</h3>'
+    + '<div class="grid md:grid-cols-3 gap-5">'
+    + a.types.map(function(ty){ return '<div class="border '+t.card+' p-6 rounded-lg"><div class="font-serif text-xl '+t.title+' mb-2">'+ty[0]+'</div><p class="text-sm '+t.cardText+' leading-relaxed">'+ty[1]+'</p></div>'; }).join('')
+    + '</div></div>'
+  ) : '';
+
+  var procedure = a.procedure.map(function(step,i){
+    return '<li class="relative pl-12 pb-7 border-l '+t.stepBorder+' last:border-l-0 last:pb-0">'
+      + '<span class="absolute -left-4 top-0 h-8 w-8 rounded-full border '+t.stepBorder+' '+t.sec.split(' ')[0]+' flex items-center justify-center text-xs font-serif '+t.sub+'">'+(i+1)+'</span>'
+      + '<span class="block '+t.cardText+' leading-relaxed">'+step+'</span></li>';
+  }).join('');
+
+  var reqs = a.requirements.map(function(r){
+    return '<li class="flex gap-3 '+t.cardText+' leading-relaxed"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-gold shrink-0"></span><span>'+r+'</span></li>';
+  }).join('');
+
+  var services = a.services.map(function(s){
+    return '<span class="px-4 py-2 border '+t.chip+' rounded-full text-sm">'+s+'</span>';
+  }).join('');
+
+  return '<section id="'+a.id+'" class="ip-anchor '+t.sec+' py-24 lg:py-32">'
+    + '<div class="mx-auto max-w-7xl px-6 lg:px-10">'
+    +   '<div class="reveal flex items-start gap-6">'
+    +     '<div class="font-serif leading-none '+t.num+' text-[clamp(3rem,8vw,7rem)] hidden sm:block">'+a.num+'</div>'
+    +     '<div><div class="text-xs tracking-[0.3em] uppercase '+t.sub+' mb-3">Practice area '+a.num+'</div>'
+    +     '<h2 class="font-serif text-5xl lg:text-6xl '+t.title+' leading-tight">'+a.title+'</h2></div>'
+    +   '</div>'
+    +   '<p class="reveal mt-8 max-w-3xl text-lg '+t.lead+' leading-relaxed">'+a.lead+'</p>'
+    +   '<div class="reveal mt-8"><div class="text-xs tracking-[0.25em] uppercase '+t.sub+' mb-4">Governing law</div><div class="flex flex-wrap gap-3">'+laws+'</div></div>'
+    +   types
+    +   '<div class="grid lg:grid-cols-2 gap-12 lg:gap-16 mt-14">'
+    +     '<div class="reveal"><h3 class="font-serif text-2xl '+t.title+' mb-7">Procedure</h3><ol class="ml-2">'+procedure+'</ol></div>'
+    +     '<div class="reveal"><h3 class="font-serif text-2xl '+t.title+' mb-7">Requirements</h3><ul class="space-y-4">'+reqs+'</ul></div>'
+    +   '</div>'
+    +   '<div class="reveal mt-14"><div class="text-xs tracking-[0.25em] uppercase '+t.sub+' mb-5">Services we provide</div><div class="flex flex-wrap gap-3">'+services+'</div></div>'
+    + '</div></section>';
+}).join('');
+document.getElementById('ipSections').innerHTML = html;
+// animate in the freshly injected content (shared observer)
+if(window.SITE) window.SITE.observeReveals();
+
+// Active sub-nav highlight
+var tabs = Array.prototype.slice.call(document.querySelectorAll('.ip-tab'));
+var secObserver = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){
+      tabs.forEach(function(t){ t.classList.toggle('active', t.getAttribute('href')==='#'+e.target.id); });
+    }
+  });
+},{rootMargin:'-45% 0px -50% 0px'});
+document.querySelectorAll('main section[id]').forEach(function(s){ secObserver.observe(s); });
+</script>
+</body>
+</html>

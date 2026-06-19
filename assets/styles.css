@@ -1,0 +1,37 @@
+/* Bharucha & Co. — shared design language
+   Colours, type and motion primitives used across every page. */
+
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; }
+.font-serif { font-family: 'Cormorant Garamond', serif; }
+
+/* ---- Reveal-on-scroll ---- */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s ease, transform .9s ease; }
+.reveal.in { opacity: 1; transform: none; }
+
+/* ---- Hero ambient glow ---- */
+.hero-glow {
+  position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(60% 50% at 70% 30%, rgba(120,130,220,0.22), transparent 70%),
+              radial-gradient(50% 45% at 20% 80%, rgba(184,150,81,0.14), transparent 70%);
+  animation: drift 16s ease-in-out infinite alternate;
+}
+@keyframes drift { from { transform: translate3d(-3%,-2%,0) scale(1); } to { transform: translate3d(3%,2%,0) scale(1.08); } }
+
+/* ---- Marquee track (recognitions) ---- */
+.track { display: flex; width: max-content; animation: marquee 32s linear infinite; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* ---- Headline character reveal ---- */
+.char { display: inline-block; opacity: 0; transform: translateY(40px); animation: rise .9s forwards; }
+@keyframes rise { to { opacity: 1; transform: none; } }
+
+/* ---- Interior page sub-nav ---- */
+.ip-anchor { scroll-margin-top: 150px; }
+.ip-tab.active { color: #b89651; }
+.ip-tab.active span { width: 100%; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-glow, .track, .char { animation: none !important; }
+  .char { opacity: 1; transform: none; }
+}

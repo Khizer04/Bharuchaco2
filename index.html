@@ -6,75 +6,16 @@
 <title>Bharucha & Co. — Decades of Legal Excellence</title>
 <meta name="description" content="Established in 1948, Bharucha & Co. is one of the oldest law firms in Pakistan — intellectual property, corporate, and civil law advisory from Karachi.">
 <script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/theme.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        navy: '#1a1f4d',
-        navydeep: '#11142f',
-        ivory: '#f6f3ec',
-        charcoal: '#2b2b2b',
-        gold: '#b89651'
-      },
-      fontFamily: {
-        serif: ['"Cormorant Garamond"', 'serif'],
-        sans: ['Inter', 'sans-serif']
-      }
-    }
-  }
-}
-</script>
-<style>
-  html { scroll-behavior: smooth; }
-  body { font-family: 'Inter', sans-serif; }
-  .font-serif { font-family: 'Cormorant Garamond', serif; }
-  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 1s ease, transform 1s ease; }
-  .reveal.in { opacity: 1; transform: none; }
-  .hero-glow {
-    position: absolute; inset: 0; pointer-events: none;
-    background: radial-gradient(60% 50% at 70% 30%, rgba(120,130,220,0.22), transparent 70%),
-                radial-gradient(50% 45% at 20% 80%, rgba(184,150,81,0.14), transparent 70%);
-    animation: drift 16s ease-in-out infinite alternate;
-  }
-  @keyframes drift { from { transform: translate3d(-3%,-2%,0) scale(1); } to { transform: translate3d(3%,2%,0) scale(1.08); } }
-  .track { display:flex; width:max-content; animation: marquee 32s linear infinite; }
-  @keyframes marquee { from { transform: translateX(0);} to { transform: translateX(-50%);} }
-  .char { display:inline-block; opacity:0; transform: translateY(40px); animation: rise .9s forwards; }
-  @keyframes rise { to { opacity:1; transform:none; } }
-  @keyframes scrollcue { 0%{transform:translateY(-100%)} 100%{transform:translateY(400%)} }
-  @media (prefers-reduced-motion: reduce){ .hero-glow,.track,.char{animation:none!important} .char{opacity:1;transform:none} }
-</style>
+<link rel="stylesheet" href="assets/styles.css">
 </head>
-<body class="bg-ivory text-charcoal antialiased">
+<body data-page="home" class="bg-ivory text-charcoal antialiased">
 
-<!-- NAV -->
-<header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
-  <div class="mx-auto max-w-7xl px-6 lg:px-10 flex items-center justify-between h-20">
-    <a href="#top" class="flex items-center group">
-      <img id="logoWhite" src="logo-white.png" alt="Bharucha & Co." class="h-9 lg:h-10 w-auto">
-      <img id="logoNavy" src="logo-navy.png" alt="Bharucha & Co." class="h-9 lg:h-10 w-auto hidden">
-    </a>
-    <nav class="hidden lg:flex items-center gap-9 text-sm tracking-wide" id="navlinks">
-      <a href="#firm" class="text-ivory/80 hover:text-gold transition">The Firm</a>
-      <a href="#services" class="text-ivory/80 hover:text-gold transition">Services</a>
-      <a href="#people" class="text-ivory/80 hover:text-gold transition">Professionals</a>
-      <a href="#news" class="text-ivory/80 hover:text-gold transition">Insights</a>
-      <a href="#contact" id="navcta" class="bg-gold text-navydeep font-medium px-6 py-2 rounded-full hover:bg-ivory transition">Contact</a>
-    </nav>
-    <button id="burger" class="lg:hidden text-ivory text-3xl leading-none" aria-label="Open menu">&#8801;</button>
-  </div>
-  <div id="mobilemenu" class="hidden lg:hidden bg-navydeep/98 backdrop-blur px-6 py-6 space-y-4 text-ivory text-lg">
-    <a href="#firm" class="block">The Firm</a>
-    <a href="#services" class="block">Services</a>
-    <a href="#people" class="block">Professionals</a>
-    <a href="#news" class="block">Insights</a>
-    <a href="#contact" class="block text-gold">Contact</a>
-  </div>
-</header>
+<!-- NAV (injected by components.js) -->
+<header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-500"></header>
 
 <!-- HERO (scroll-driven, pinned stage) -->
 <section id="top" class="relative bg-navydeep text-ivory" style="height:320vh">
@@ -265,19 +206,11 @@ tailwind.config = {
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="bg-navydeep text-ivory/60 border-t border-ivory/10">
-  <div class="mx-auto max-w-7xl px-6 lg:px-10 py-10 flex flex-col md:flex-row items-center justify-between gap-6 text-sm">
-    <img src="logo-white.png" alt="Bharucha & Co." class="h-9 w-auto">
-    <p>© 2026 Bharucha &amp; Co. All Rights Reserved. · <a href="#" class="hover:text-gold">Privacy Notice</a> · <a href="#" class="hover:text-gold">Retention Policy</a></p>
-    <div class="flex gap-5">
-      <a href="https://www.facebook.com/BharuchaCo" class="hover:text-gold transition">Facebook</a>
-      <a href="https://x.com/BharuchaCo" class="hover:text-gold transition">X</a>
-      <a href="https://www.linkedin.com/company/bharuchaco" class="hover:text-gold transition">LinkedIn</a>
-    </div>
-  </div>
-</footer>
+<!-- FOOTER (injected by components.js) -->
+<footer id="site-footer"></footer>
 
+<script src="assets/components.js"></script>
+<script src="assets/site.js"></script>
 <script>
 // Headline fill (two lines)
 (function(){
@@ -345,19 +278,20 @@ tailwind.config = {
 
 // Services
 var services = [
-  ['Intellectual Property','Patents, trademarks, designs, copyright & domain names.'],
-  ['Company Law','Corporate structuring, compliance & commercial advisory.'],
-  ['Inheritance & Succession','Estate planning, succession & wealth continuity.'],
-  ['Employment Law','Workforce, contracts & employer–employee disputes.'],
-  ['Nonprofit Organization','Formation, governance & regulatory guidance.'],
-  ['Franchising & Litigation','Franchise structuring and dispute resolution.'],
-  ['Real Estate & Property','Transactions, title & property advisory.']
+  ['Intellectual Property','Patents, trademarks, designs, copyright & domain names.','intellectual-property.html'],
+  ['Company Law','Corporate structuring, compliance & commercial advisory.','#contact'],
+  ['Inheritance & Succession','Estate planning, succession & wealth continuity.','#contact'],
+  ['Employment Law','Workforce, contracts & employer–employee disputes.','#contact'],
+  ['Nonprofit Organization','Formation, governance & regulatory guidance.','#contact'],
+  ['Franchising & Litigation','Franchise structuring and dispute resolution.','#contact'],
+  ['Real Estate & Property','Transactions, title & property advisory.','#contact']
 ];
 document.getElementById('servicegrid').innerHTML = services.map(function(s,i){
-  return '<a href="#contact" class="group bg-navy p-8 lg:p-10 hover:bg-navydeep transition reveal block">'
+  var more = s[2]!=='#contact' ? '<span class="inline-block mt-5 text-gold text-sm tracking-wide opacity-0 group-hover:opacity-100 transition">View practice &rarr;</span>' : '';
+  return '<a href="'+s[2]+'" class="group bg-navy p-8 lg:p-10 hover:bg-navydeep transition reveal block">'
     +'<div class="font-serif text-gold/70 text-sm mb-6">0'+(i+1)+'</div>'
     +'<h3 class="font-serif text-2xl lg:text-3xl mb-3 group-hover:text-gold transition">'+s[0]+'</h3>'
-    +'<p class="text-ivory/55 text-sm leading-relaxed">'+s[1]+'</p></a>';
+    +'<p class="text-ivory/55 text-sm leading-relaxed">'+s[1]+'</p>'+more+'</a>';
 }).join('');
 
 // People
@@ -462,30 +396,9 @@ document.getElementById('awards').innerHTML = dup.map(function(a){
   sizeCards(); go(0); play();
 })();
 
-// Nav scroll state
-var nav = document.getElementById('nav'), logoWhite=document.getElementById('logoWhite'), logoNavy=document.getElementById('logoNavy'), links=document.getElementById('navlinks');
-window.addEventListener('scroll', function(){
-  if(window.scrollY > 60){
-    nav.classList.add('bg-ivory/95','backdrop-blur','shadow-sm');
-    logoWhite.classList.add('hidden'); logoNavy.classList.remove('hidden');
-    links.querySelectorAll('a').forEach(function(a){ if(a.id==='navcta')return; a.classList.remove('text-ivory/80','text-ivory');a.classList.add('text-navy/70'); });
-  } else {
-    nav.classList.remove('bg-ivory/95','backdrop-blur','shadow-sm');
-    logoNavy.classList.add('hidden'); logoWhite.classList.remove('hidden');
-    links.querySelectorAll('a').forEach(function(a){ if(a.id==='navcta')return; a.classList.add('text-ivory/80');a.classList.remove('text-navy/70'); });
-  }
-});
-
-// Mobile menu
-document.getElementById('burger').addEventListener('click',function(){
-  document.getElementById('mobilemenu').classList.toggle('hidden');
-});
-
-// Reveal on scroll
-var io = new IntersectionObserver(function(entries){
-  entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
-},{threshold:0.12});
-document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+// Nav colour-swap, mobile menu and reveal-on-scroll are handled by assets/site.js.
+// Re-observe the dynamically injected sections (services, people, news, memberships).
+if(window.SITE) window.SITE.observeReveals();
 
 // Parallax for statement band image
 (function(){
